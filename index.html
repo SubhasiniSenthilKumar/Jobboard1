@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jobboard</title>
+    <style>
+        .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #837997;
+    padding: 30px;
+}
+
+        .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #3498db;
+    text-align: left;
+    margin: 20px 0;
+
+}
+.search-bar {
+    margin-top: 20px;
+}
+
+.search-bar input {
+    padding: 8px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.image img{
+    height: 300px; /* Set the desired height */
+    width: 350px; /* Set the desired width */
+    object-fit: cover; /* This property maintains the aspect ratio while covering the specified dimensions */
+}
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 30px;
+}
+.header-paragraph {
+    color: #48486e;
+    font-size: 60px;
+    margin-left: 100px; 
+   
+    text-align: center; 
+    
+}
+.login {
+    max-width: 1000px;
+    
+    margin: 80px auto;
+    padding: 70px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    text-align: center;
+    color: #3498db;
+}
+.cen{
+   text-align: center;
+}
+
+    </style>
+</head>
+<body>
+   <div class="header-container"> 
+    <div class="logo">
+        <span>Quick</span><span>Hire</span>
+    </div>
+   
+        <div class="search-bar">
+            <input type="text" id="jobSearch" placeholder="Search for jobs...">
+            <button onclick="searchJobs()">Search</button>
+        </div>
+       
+    </div>
+   
+    <div class="head"> 
+    <div class="image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoc5XvccgUBcX3b4TOC_wQrQZ9ZHFXTIk9Cw&usqp=CAU" >
+    </div>
+    <p class="header-paragraph">Your professional journey starts here.Find your dream job with QuickHire.</p>
+    </div>
+    <div class="login">
+        <table cellspacing="2" align="center" cellpadding="8" border="0">
+        <tr>
+        <td>Enter User Name :</td>
+        <td><input type="text" placeholder="Enter user name here" id="email" class="tb" /></td>
+        </tr>
+        <tr>
+        <td>Enter Password :</td>
+        <td><input type="password" placeholder="Enter Password here" id="pwd1" class="tb" /></td>
+        </tr>
+        <tr>
+        <td></td>
+        <td>
+        <input type="submit" value="Reset" onclick="clearFunc()" class="btn" />
+        <input type="submit" value="Login" class="btn" onClick="login()" /></td>
+        </tr>
+        </table>
+        </div>
+           <!-- login box div ending here.. -->
+        </div>
+    <main>
+       
+           
+                <h2>FIND YOUR CAREER</h2><br>
+                <div class="cen">
+            <a href="job-listings.html">START SEARCH </a>
+                </div>
+            
+            <a href="software-engineer-details"></a><br>
+            <a href="fs.html"></a>
+            <a href="de.html"></a>
+            
+       
+    </main>
+   
+</body>
+
+   
+<script>
+    // main.js
+
+/*function validate(){
+     username = document.getElementById('username').value;
+     password = document.getElementById('password').value;
+
+   
+    if (username === '' && password === '') {
+        alert('Login successful!');
+       
+    } else {
+        alert('Invalid username or password. Please try again.');
+    }
+}*/
+function login()
+	{
+		var uname = document.getElementById("email").value;
+		var pwd = document.getElementById("pwd1").value;
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if(uname =='')
+		{
+			alert("please enter user name.");
+		}
+		else if(pwd=='')
+		{
+        	alert("enter the password");
+		}
+		else if(!filter.test(uname))
+		{
+			alert("Enter valid email id.");
+		}
+		else if(pwd.length < 6 || pwd.length > 6)
+		{
+			alert("Password min and max length is 6.");
+		}
+		else
+		{
+	alert('Thank You for Login & You are Redirecting to Campuslife Website');
+  //Redirecting to other page or webste code or you can set your own html page.
+       window.location = "https://www.campuslife.co.in";
+			}
+	}
+	//Reset Inputfield code.
+	function clearFunc()
+	{
+		document.getElementById("email").value="";
+		document.getElementById("pwd1").value="";
+	}	
+	
+
+
+
+
+</script>
+
+
+</html>

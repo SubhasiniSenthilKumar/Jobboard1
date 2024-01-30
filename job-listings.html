@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>QuickHire - Job Listings</title>
+</head>
+<style>
+    .im img{
+        
+        position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 650px;
+  
+  opacity: 0.3;
+  display: block;
+
+
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <span>Quick</span><span>Hire</span>
+        </div>
+       
+           
+    </header><br>
+
+    <main>
+        <section class="filters">
+            <label for="locationFilter">Location:</label>
+            <select id="locationFilter" onchange="filterJobs()">
+                <option value="all">All </option>
+                <option value="CityA">Chennai</option>
+                <option value="CityB">Tanjore</option>
+                <option value="CityB">Tripur</option>
+                <option value="CityB">Trichy</option>
+                
+            </select>
+        </section><br>
+
+        <section class="job-listings" id="jobListings">
+           
+        </section>
+        <div class="im">
+     
+       <img align="bottom-right" src="https://images.pexels.com/photos/2041398/pexels-photo-2041398.jpeg?cs=srgb&dl=pexels-cowomen-2041398.jpg&fm=jpg">
+        </div>
+       </main>
+
+   
+
+    <script src="job-listings.js"></script>
+</body>
+
+</html>
